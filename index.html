@@ -18,12 +18,12 @@
 
     // Simulates "game over" when a score would be sent
     $("#submit_score").click( function () {
-      alert("JOU");
       var msg = {
         "messageType": "SCORE",
         "score": parseFloat($("#score").text())
       };
       window.parent.postMessage(msg, "*");
+      alert("JOU");
     });
 
     // Sends this game's state to the service.
